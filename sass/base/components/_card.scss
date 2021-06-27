@@ -1,0 +1,164 @@
+.card {
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    font-size: $default-font-size;
+    position: relative;
+    height: 55rem;
+
+
+    &__side {
+        background-color: white;
+        height: 55rem;
+        transition: all 0.8s;
+        position: absolute;
+        backface-visibility: hidden;
+        width: 100%;
+        box-shadow: 3px 3px 3rem rgba(black, 0.5);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+
+    &__side-front {
+        color: white;
+        background-image: white;
+
+    }
+
+    &__side-back {
+        color: white;
+
+        transform: rotateY(180deg);
+
+        &-1{
+            background-image: linear-gradient(to right bottom, $secondary-light-yellow, $secondary-dark-yellow);
+        }
+
+        &-2{
+            background-image: linear-gradient(to right bottom, $secondary-light-blue, $secondary-dark-blue);
+        }
+
+        &-3{
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+
+
+    }
+
+
+    &:hover &__side-front {
+        transform: rotateY(-180deg)
+    }
+
+    &:hover &__side-back {
+        transform: rotateY(0deg)
+    }
+
+
+
+    &__picture {
+        background-size: cover;
+        background-blend-mode: screen;
+        height: 23rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        display: block;
+
+        &-1 {
+            background-image: linear-gradient(to right bottom, $secondary-light-yellow, $secondary-dark-yellow), url(../../../img/nat-6.jpg);
+
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right bottom, $secondary-light-blue, $secondary-dark-blue), url(../../../img/nat-5.jpg);
+
+        }
+
+        &-3 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../../../img/nat-4.jpg);
+
+        }
+    }
+    
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        top: 10rem;
+        position: absolute;
+        text-align: right;
+        color: black;
+        right: 2rem;
+        width: 75%;
+        padding: 1rem 4rem;
+        display: block;
+
+    }
+
+    &__heading-span {
+
+        &-1 {
+            background-image: linear-gradient(to right, rgba($secondary-light-yellow, 1), rgba($secondary-dark-yellow, 1));
+        }
+
+        &-2 {
+            background-image: linear-gradient(to right, rgba(  $secondary-light-blue, 1), rgba($secondary-dark-blue, 1));
+
+        }
+        &-3 {
+            background-image: linear-gradient(to right, rgba(      $color-primary-light, 1), rgba($color-primary-dark, 1));
+
+        }
+
+    }
+
+
+
+
+
+    &__details {
+
+
+
+        ul {
+            list-style: none;
+            width: 50%;
+            margin: 0 auto;
+
+            li {
+
+                text-align: center;
+                font-size: 1rem;
+                padding: 2rem;
+                color: black;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgb(129, 129, 129);
+                }
+
+            }
+        }
+    }
+
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    &__price-box {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    &__price-only {
+        text-transform: uppercase;
+    }
+
+}
