@@ -1,0 +1,44 @@
+.footer{
+    padding: 5rem;
+    background-color: $color-grey-dark;
+
+
+    &__logo-box{}
+    &__logo{}
+    &__navigation{
+        border-top: 1px solid white;
+        display: inline-block;
+    }
+    &__list{}
+    &__item{
+        display: inline-block;
+        font-size: 1.3rem;
+        font-weight: 600;
+        &:not(:last-child)
+        {
+            margin-right: 2rem;
+        }
+    }
+    &__link{
+
+        &:link, &:visited{
+            color: $color-grey-light-1;
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            
+        }
+
+        &:hover, &:active{
+            color: $color-primary-light;
+            box-shadow: 0 2rem 2rem rgba(black, 0.5);
+        }
+    }
+    &__copyright{
+        color: $color-grey-light-1;
+        text-align: justify;
+        text-transform: uppercase;
+        border-top: 1px solid white;
+        display: inline-block;
+    }
+}

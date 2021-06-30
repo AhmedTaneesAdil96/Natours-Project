@@ -7,6 +7,9 @@
     padding: 3rem 3rem;
     transform: skewX(-12deg);
     
+    &-btn{
+        margin-right: 0 auto;
+    }
 
 &__text{
     transform: skewX(12deg);
@@ -60,4 +63,6 @@
         filter: blur(10px) brightness(15px);
 
     }
+
+    
 }
